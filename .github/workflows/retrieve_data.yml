@@ -26,3 +26,11 @@ jobs:
       - name: Print time
         run: |
           echo "$(python -c 'import datetime as dt; print(dt.datetime.now().__str__())')"
+      - name: Commit and push if it changed
+        run: |
+          git config user.name actions-user
+          git config user.email "actions@github.com"
+          git add -A
+          timestamp=$(date -u)
+          git commit -m "GH ACTION latest update: ${timestamp}" || exit 0
+          git push
