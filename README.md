@@ -1,0 +1,3 @@
+## GitHub Action Data Retriever
+
+Hi everyone! This repository calls an API to download the real-time bike rental system data Velib. The language used is Python and the script is run each hour each day during the whole month of December 2021. This whole process is run on a schedule using GitHub Actions. You can find more details on the API called [here](https://opendata.paris.fr/explore/dataset/velib-disponibilite-en-temps-reel/).
